@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>SRE Sunday Vol.2 Badge Admin</title>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    <script type="text/javascript" src="./sre_sunday_vol2_badge_abi.js"></script>
+    <script type="text/javascript" src="./sre_sunday_vol2_badge.js"></script>
+</head>
+<body style="margin: 0px; padding: 0px;">
+    <div>
+        <h1>SRE Sunday Vol.2 Badge Admin</h1>
+    </div>
+    <hr />
+    <div>
+        <h2>Stats</h2>
+        <div>
+            <h3>Contract</h3>
+            <div>
+                <div>
+                    <span>Address :</span>
+                    <!-- entered address is for local testnet, it is subject to change -->
+                    <input
+                        id="contractaddress-input-text"
+                        type="text"
+                        value=""
+                        style="width: 360px;"
+                    />
+                </div>
+                <div>
+                    <span>Owner :</span>
+                    <!-- entered address is for local testnet, it is subject to change -->
+                    <span id="contractowner-label" />
+                </div>
+            </div>
+            <div>
+                <h3>About Token</h3>
+                <div>
+                    <span>Token Name :</span>
+                    <span class="tokenname-label" />
+                </div>
+                <div>
+                    <span>Token Symbol :</span>
+                    <span class="tokensymbol-label" />
+                </div>
+                <div>
+                    <span>Your Base URI :</span>
+                    <span class="tokenuri-label" />
+                </div>
+            </div>
+            <div>
+                <h3>Owned Token ID</h3>
+                <div>
+                    <span id="tokenid-label" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div>
+        <h2>Token Exists</h2>
+        <div>
+            <div>
+                <span>By Token ID:</span>
+                <input id="search-tokenid-input-text" type="text" value="" style="width: 360px;" />
+                <input id="search-tokenid-button" type="button" value="Search" />
+            </div>
+            <div>
+                <span>Result:</span>
+                <span id="search-tokenid-result-label" />
+            </div>
+        </div>
+        <div>
+            <div>
+                <span>By Address:</span>
+                <input id="search-address-input-text" type="text" value="" style="width: 360px;" />
+                <input id="search-address-button" type="button" value="Search" />
+            </div>
+            <div>
+                <span>Result:</span>
+                <span id="search-address-result-label" />
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div>
+        <h2>Transfer</h2>
+        <div>
+            <span>Only the owner of contract or token owner can operate.</span>
+        </div>
+        <div>
+            <div>
+                <span>From:</span>
+                <input id="transfer-from-input-text" type="text" value="" style="width: 360px;" />
+            </div>
+            <div>
+                <span>To:</span>
+                <input id="transfer-to-input-text" type="text" value="" style="width: 360px;" />
+            </div>
+            <div>
+                <input id="transfer-button" type="button" value="Transfer" />
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div>
+        <h2>Mint</h2>
+        <div>
+            <span>Only the owner of contract can operate.</span>
+        </div>
+        <div>
+            <div>
+                <span>Recipient Address:</span>
+                <input id="mint-recipient-input-text" type="text" value="" style="width: 256px;" />
+            </div>
+            <div>
+                <input id="mint-button" type="button" value="Mint" />
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2>Mint Batch</h2>
+        <div>
+            <span>Only the owner of contract can operate.</span>
+        </div>
+        <div>
+            <div>
+                <span>Recipient Addresses:</span><br />
+                <input class="mint-match-recipients-input-text" type="text" value="" style="width: 256px;" /><br />
+                <input class="mint-match-recipients-input-text" type="text" value="" style="width: 256px;" /><br />
+                <input class="mint-match-recipients-input-text" type="text" value="" style="width: 256px;" /><br />
+                <input class="mint-match-recipients-input-text" type="text" value="" style="width: 256px;" /><br />
+                <input class="mint-match-recipients-input-text" type="text" value="" style="width: 256px;" /><br />
+                <input class="mint-match-recipients-input-text" type="text" value="" style="width: 256px;" /><br />
+                <input class="mint-match-recipients-input-text" type="text" value="" style="width: 256px;" /><br />
+                <input class="mint-match-recipients-input-text" type="text" value="" style="width: 256px;" /><br />
+                <input class="mint-match-recipients-input-text" type="text" value="" style="width: 256px;" />
+            </div>
+            <div>
+                <input id="mint-batch-button" type="button" value="Mint" />
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div>
+        <h2>Burn</h2>
+        <div>
+            <span>Only the owner of contract can operate.</span>
+        </div>
+        <div>
+            <div>
+                <span>Token ID:</span>
+                <input id="burn-tokenid-input-text" type="text" value="" style="width: 360px;" />
+            </div>
+            <div>
+                <input id="burn-button" type="button" value="Transfer" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
