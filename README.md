@@ -1,21 +1,30 @@
-# Prerequisites for Development
+# What is this ?
 
-## Install geth
+This is a smart contract project for distributing event limited item developed with truffle and solidity.
+
+# for Developer
+
+## Prerequisites
+
+### Install geth
 
 ```
 % brew tap ethereum/ethereum
 % brew install ethereum
 ```
 
-# Launch local network
+## Launching
+
+
+### Local
 
 ```
 % geth --networkid 10 --allow-insecure-unlock --nodiscover --datadir ./local_geth_network/ --http --dev console
 ```
 
-# Deploy
+## Deployment
 
-## Local
+### Local
 
 Add your wallet account to local geth network.
 Before adding account, stop local network.
@@ -50,13 +59,13 @@ Migrating contract and set wallet account as owner
 % LOCAL_GETH_WALLET_MNEMONIC="<your mnemonic>" truffle migrate --network local_geth
 ```
 
-## Görli (testnet)
+### Görli (testnet)
 
 ```
 % INFURA_GOERLI_PROJECT_ID="<project id>" GOERLI_WALLET_MNEMONIC="<your mnemonic>" truffle migrate --network goerli
 ```
 
-## Mainnet
+### Ethereum Mainnet
 
 Obfuscate sensitive data.
 

@@ -40,13 +40,13 @@
     const api = {
         contract: null,
         operator: null,
-/*
+
         onTransfer: (from, to, tokenId) => {
             console.log(from);
             console.log(to);
             console.log(tokenId);
         },
-*/
+
         name: () => api.contract.name().call({from: api.operator}),
         symbol: () => api.contract.symbol().call({from: api.operator}),
         owner: () => api.contract.owner().call({from: api.operator}),
